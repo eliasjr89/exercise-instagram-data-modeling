@@ -55,4 +55,9 @@ class Follower(Base):
 
 
 
-render_er(Base, "diagram.png")
+try:
+    result = render_er(Base, 'diagram.png')
+    print("Success! Check the diagram.png file")
+except Exception as e:
+    print("There was a problem genering the diagram")
+    raise e
